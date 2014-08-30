@@ -1,0 +1,23 @@
+{
+  "name": "d3-clippings",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "koa": "~0.10.0",
+    "koa-static": "~1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node --harmony server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cblanc/d3-clippings.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/cblanc/d3-clippings/issues"
+  }
+}
