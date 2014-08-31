@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="../assets/bootstrap.min.js" charset="utf-8"></script>
+		<link href="../assets/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../assets/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Hello</h1>
+				</div>
+			</div>
+		</div>
+		<script>
+		d3.select(".col-md-12").selectAll("p")
+			.data([4,8,15,16,23,42])
+			.enter()
+			.append("p")
+			.text(function (d) { return "I'm the number " + d + "!"; })
+		</script>
+	</body>
+</html>

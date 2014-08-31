@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js" charset="utf-8"></script>
+		<script src="../assets/bootstrap.min.js" charset="utf-8"></script>
+		<link href="../assets/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../assets/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+		<style>
+		.chart div {
+		  font: 10px sans-serif;
+		  background-color: steelblue;
+		  text-align: right;
+		  padding: 3px;
+		  margin: 1px;
+		  color: white;
+		}
+		</style>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+				<h1>Circles</h1>
+					<div class="example1">
+						<svg width="720" height="120">
+						  <circle cx="40" cy="60" r="10"></circle>
+						  <circle cx="80" cy="60" r="10"></circle>
+						  <circle cx="120" cy="60" r="10"></circle>
+						</svg>
+					</div>
+					<div class="example2">
+						<svg width="720" height="120">
+						  <circle cx="40" cy="60" r="10"></circle>
+						  <circle cx="80" cy="60" r="10"></circle>
+						  <circle cx="120" cy="60" r="10"></circle>
+						</svg>
+					</div>
+					<div class="example3">
+						<svg width="720" height="120">
+						  <circle cx="40" cy="60" r="10"></circle>
+						  <circle cx="80" cy="60" r="10"></circle>
+						  <circle cx="120" cy="60" r="10"></circle>
+						</svg>
+					</div>
+					<div class="example4">
+						<svg width="720" height="120">
+						  <circle cx="40" cy="60" r="10"></circle>
+						  <circle cx="80" cy="60" r="10"></circle>
+						  <circle cx="120" cy="60" r="10"></circle>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		var circles1 = d3.select(".example1").selectAll("circle");
+
+		circles1
+			.style("fill", "steelblue")
+			.attr("r", 30);
+
+		var circles2 = d3.select(".example2").selectAll("circle");
+
+		circles2.attr("cx", function () { return Math.random() * 720; })
+
+		var circles3 = d3.select(".example3").selectAll("circle");
+		circles3
+			.data([32, 57, 112])
+			.attr("r", function (d) { return Math.sqrt(d); })
+			.attr("cx", function (d, i) { return i * 100 + 30; })
+
+		var circles4 = d3.select(".example4").selectAll("circle").data([20, 32]).exit().remove();
+
+		</script>
+	</body>
+</html>
