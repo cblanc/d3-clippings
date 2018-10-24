@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "koa": "~0.10.0",
+    "koa": "~1.4.1",
     "koa-static": "~1.4.6"
   },
   "devDependencies": {},
